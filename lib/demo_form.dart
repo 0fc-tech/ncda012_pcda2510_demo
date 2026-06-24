@@ -44,14 +44,14 @@ class _ContactFormPageState extends State<ContactFormPage> {
                     }return "E-mail incorrect";
                   },
                 ),
-                Switch(value: _rememberMe, onChanged: (newValue){
+                SwitchListTile(value: _rememberMe, onChanged: (newValue){
                   setState(() {
                     _rememberMe = newValue;
                   });
-                }),
+                },title: Text("Se souvenir de moi"),),
                 SizedBox(
                   width: MediaQuery.of(context).size.width,
-                  child: OutlinedButton(
+                  child: FilledButton(
                       onPressed: (){
                         _keyFormContact.currentState?.validate();
                       },
